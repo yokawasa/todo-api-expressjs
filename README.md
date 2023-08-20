@@ -1,5 +1,5 @@
 # todo-app-expressjs
-Todo application with Express.js. The project is still WIP ...
+Todo application with Express.js and static page. The project is still WIP ...
 Base code comes from [here](https://quickstarts.postman.com/guide/express/index.html#0)
 
 ## Quickstart
