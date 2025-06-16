@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 // initialize Express.js server and save as a variable
 // so it can be referred to as `app`
@@ -10,6 +11,7 @@ const serveStatic = require("serve-static");
 // Add this line after `app.use(bodyParser.json());`
 app.use(serveStatic("public"));
 
+app.use(cors()); // add  CORS middleware to allow cross-origin requests
 app.use(bodyParser.json());
 let todos = []; // In-memory storage for todos
 

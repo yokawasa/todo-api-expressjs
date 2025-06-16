@@ -1,11 +1,10 @@
-# todo-app-expressjs
-Todo application with Express.js and static page. The project is still WIP ...
-Base code comes from [here](https://quickstarts.postman.com/guide/express/index.html#0)
+# todo-api-expressjs
+
+A simple Todo API with Express.js and Static page.
 
 ## Quickstart
 
 (1) Install [NodeJS](https://nodejs.org/en/download) if not yet installed
-
 
 (2) Install dependant packages
 
@@ -32,7 +31,6 @@ curl http://localhost:3000
 ```
 
 You can access the backend API directory. See the next section
-
 
 ## Testing APIs
 
@@ -75,8 +73,3 @@ Get all todos
 ```bash
 curl --location 'localhost:3000/todos'
 ```
-
-## Todo for the project
-
-- add more docs
-- store data in mongoDB
