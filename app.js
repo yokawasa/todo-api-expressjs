@@ -1,18 +1,16 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const serveStatic = require("serve-static");
 
 // initialize Express.js server and save as a variable
 // so it can be referred to as `app`
 const app = express();
 
-// Add this line near the top of your file, under the existing imports
-const serveStatic = require("serve-static");
-// Add this line after `app.use(bodyParser.json());`
-app.use(serveStatic("public"));
-
 app.use(cors()); // add  CORS middleware to allow cross-origin requests
-app.use(bodyParser.json());
+app.use(bodyParser.json()); // add body-parser middleware to parse JSON request bodies
+app.use(serveStatic("static")); // serve static files from the "static" directory
+
 let todos = []; // In-memory storage for todos
 
 // GET endpoint to fetch all todo items
