@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: Todo API
   version: 1.0.0
-  description: Postman Collection for a Todo API
+  description: OpenAPI Spec for a Todo API
 servers:
   - url: '{{baseUrl}}'
 paths:
