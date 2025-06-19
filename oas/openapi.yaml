@@ -85,67 +85,36 @@ paths:
       - name: todoid
         in: path
         required: true
-        description: '(Required) '
-        example: '12345'
         schema:
-          type: integer
+          type: string
     get:
       summary: Get Todo
-      parameters: []
+      parameters:
+        - name: Accept
+          in: header
+          required: false
+          example: application/json
+          schema:
+            type: string
       responses:
         '200':
           headers:
-            X-Powered-By:
-              schema:
-                type: string
-              example: Express
-            Access-Control-Allow-Origin:
-              schema:
-                type: string
-              example: '*'
             Content-Type:
               schema:
                 type: string
-              example: application/json; charset=utf-8
-            Content-Length:
-              schema:
-                type: integer
-              example: '26'
-            ETag:
-              schema:
-                type: string
-              example: W/"1a-zoKxmrHFn4uaqb4kYUjlWpQ5kYQ"
-            Date:
-              schema:
-                type: string
-              example: Wed, 18 Jun 2025 23:10:40 GMT
-            Connection:
-              schema:
-                type: string
-              example: keep-alive
-            Keep-Alive:
-              schema:
-                type: string
-              example: timeout=5
-          description: OK
+              example: application/json
+          description: todo
           content:
             application/json:
               schema:
                 type: object
                 properties:
                   id:
-                    type: integer
+                    type: string
+                  task:
+                    type: string
                   completed:
-                    type: boolean
-  /todos/{todoId}:
-    parameters:
-      - name: todoId
-        in: path
-        required: true
-        description: (Required) The id of the todo
-        example: abcdefgh-ijkl-1234-5678-mnopqlstuvwx
-        schema:
-          type: string
+                    type: boolean 
     put:
       summary: Update Todo
       parameters:
