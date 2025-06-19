@@ -142,7 +142,7 @@ paths:
       - name: todoId
         in: path
         required: true
-        description: (Required) (Required) The id of the todo
+        description: (Required) The id of the todo
         example: abcdefgh-ijkl-1234-5678-mnopqlstuvwx
         schema:
           type: string
