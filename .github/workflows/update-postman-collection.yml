@@ -1,0 +1,71 @@
+name: Update Postman Collection
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize]
+
+env:
+  OPENAPI_FILE: oas/openapi.yaml
+  COLLECTION_FILE: postman/collections/36962762-584eb5cd-551c-4b2a-8bcc-d4ae56f2db0e.json
+
+jobs:
+  generate-postman-collection:
+    if: contains(github.event.pull_request.head.ref, 'feature-')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Check for changes in openapi.yaml
+        id: detect_change
+        run: |
+          git fetch origin main
+          CHANGED=$(git diff --name-only origin/main HEAD | grep "$OPENAPI_FILE" || true)
+          echo "changed_files=$CHANGED" >> $GITHUB_OUTPUT
+
+      # add step to finish the workflow if no changes are detected
+      - name: Exit if no changes detected
+        if: steps.detect_change.outputs.changed_files == ''
+        run: |
+          echo "No changes detected in oas/openapi.yaml. Exiting workflow."
+          exit 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install openapi-to-postmanv2
+        run: npm install -g openapi-to-postmanv2
+
+      - name: Get postman collection ID
+        id: get_collection_id
+        run: |
+          if [ -f "$COLLECTION_FILE" ]; then
+            COLLECTION_ID=$(jq -r '.info._postman_id' "$COLLECTION_FILE")
+            echo "collection_id=$COLLECTION_ID" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Generate postman collection
+        run: |
+          openapi2postmanv2 -s $OPENAPI_FILE \
+            -o $COLLECTION_FILE -p \
+            -O folderStrategy=Tags,parametersResolution=Example,enableOptionalParameters=false
+          # Update collection ID if it exists
+          if [ -n "${{ steps.get_collection_id.outputs.collection_id }}" ]; then
+            jq --arg id "${{ steps.get_collection_id.outputs.collection_id }}" \
+               '.info._postman_id = $id' "$COLLECTION_FILE" > tmp.json
+            mv tmp.json "$COLLECTION_FILE"
+          fi 
+
+      - name: Commit and push generated collection
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add $COLLECTION_FILE
+          git commit -m "chore: auto-generate postman collection from OpenAPI"
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
