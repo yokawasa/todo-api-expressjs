@@ -1,532 +1,532 @@
 {
-    "item": [
-        {
-            "id": "79d1ef11-d5f6-4e32-81ad-d06fc20e112e",
-            "name": "Add Todo",
-            "request": {
-                "name": "Add Todo",
-                "description": {},
-                "url": {
-                    "path": [
-                        "todos"
-                    ],
-                    "host": [
-                        "{{baseUrl}}"
-                    ],
-                    "query": [],
-                    "variable": []
-                },
-                "header": [
-                    {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                    },
-                    {
-                        "key": "Accept",
-                        "value": "application/json"
-                    }
-                ],
-                "method": "POST",
-                "body": {
-                    "mode": "raw",
-                    "raw": "{\n  \"task\": \"in\"\n}",
-                    "options": {
-                        "raw": {
-                            "headerFamily": "json",
-                            "language": "json"
-                        }
-                    }
-                },
-                "auth": null
-            },
-            "response": [
-                {
-                    "id": "13b7cdd2-8d63-416f-93c6-ec06be699314",
-                    "name": "The created todo",
-                    "originalRequest": {
-                        "url": {
-                            "path": [
-                                "todos"
-                            ],
-                            "host": [
-                                "{{baseUrl}}"
-                            ],
-                            "query": [],
-                            "variable": []
-                        },
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application/json"
-                            }
-                        ],
-                        "method": "POST",
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\n  \"task\": \"in\"\n}",
-                            "options": {
-                                "raw": {
-                                    "headerFamily": "json",
-                                    "language": "json"
-                                }
-                            }
-                        }
-                    },
-                    "status": "Created",
-                    "code": 201,
-                    "header": [
-                        {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                        },
-                        {
-                            "disabled": true,
-                            "description": {
-                                "content": "",
-                                "type": "text/plain"
-                            },
-                            "key": "Content-Type",
-                            "value": "application/json"
-                        }
-                    ],
-                    "body": "{\n  \"id\": \"proident ipsum elit sit\",\n  \"task\": \"ut exercitation mollit\",\n  \"completed\": true\n}",
-                    "cookie": [],
-                    "_postman_previewlanguage": "json"
-                }
-            ],
-            "event": [],
-            "protocolProfileBehavior": {
-                "disableBodyPruning": true
-            }
+  "item": [
+    {
+      "id": "3195d06b-de29-49b6-a136-778fc6a4e948",
+      "name": "Add Todo",
+      "request": {
+        "name": "Add Todo",
+        "description": {},
+        "url": {
+          "path": [
+            "todos"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
         },
-        {
-            "id": "2662664b-4883-4935-b8f9-20ce80292d7d",
-            "name": "Get Todos",
-            "request": {
-                "name": "Get Todos",
-                "description": {},
-                "url": {
-                    "path": [
-                        "todos"
-                    ],
-                    "host": [
-                        "{{baseUrl}}"
-                    ],
-                    "query": [],
-                    "variable": []
-                },
-                "header": [
-                    {
-                        "key": "Accept",
-                        "value": "application/json"
-                    }
-                ],
-                "method": "GET",
-                "body": {},
-                "auth": null
-            },
-            "response": [
-                {
-                    "id": "db87fd99-a8e0-4ea4-84b9-68236fc67a1f",
-                    "name": "List of all todos",
-                    "originalRequest": {
-                        "url": {
-                            "path": [
-                                "todos"
-                            ],
-                            "host": [
-                                "{{baseUrl}}"
-                            ],
-                            "query": [],
-                            "variable": []
-                        },
-                        "header": [
-                            {
-                                "key": "Accept",
-                                "value": "application/json"
-                            }
-                        ],
-                        "method": "GET",
-                        "body": {}
-                    },
-                    "status": "OK",
-                    "code": 200,
-                    "header": [
-                        {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                        },
-                        {
-                            "disabled": true,
-                            "description": {
-                                "content": "",
-                                "type": "text/plain"
-                            },
-                            "key": "Content-Type",
-                            "value": "application/json"
-                        }
-                    ],
-                    "body": "[\n  {\n    \"id\": \"mollit magna ut voluptate\",\n    \"task\": \"eu dolor cillum in aliquip\",\n    \"completed\": false\n  },\n  {\n    \"id\": \"in consectetur nulla sit\",\n    \"task\": \"sit est ex cupidatat\",\n    \"completed\": false\n  }\n]",
-                    "cookie": [],
-                    "_postman_previewlanguage": "json"
-                }
-            ],
-            "event": [],
-            "protocolProfileBehavior": {
-                "disableBodyPruning": true
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"task\": \"anim consectetur cupid\"\n}",
+          "options": {
+            "raw": {
+              "headerFamily": "json",
+              "language": "json"
             }
+          }
         },
+        "auth": null
+      },
+      "response": [
         {
-            "id": "f72cba8f-f912-4047-9dce-d2db4e83e45a",
-            "name": "Get Todo",
-            "request": {
-                "name": "Get Todo",
-                "description": {},
-                "url": {
-                    "path": [
-                        "todos",
-                        ":todoid"
-                    ],
-                    "host": [
-                        "{{baseUrl}}"
-                    ],
-                    "query": [],
-                    "variable": [
-                        {
-                            "type": "any",
-                            "value": "minim occaecat",
-                            "key": "todoid",
-                            "disabled": false,
-                            "description": {
-                                "content": "(Required) ",
-                                "type": "text/plain"
-                            }
-                        }
-                    ]
-                },
-                "header": [
-                    {
-                        "key": "Accept",
-                        "value": "application/json"
-                    }
-                ],
-                "method": "GET",
-                "body": {},
-                "auth": null
+          "id": "97045cd7-e5ae-4f6c-8f01-6482f9be2b56",
+          "name": "The created todo",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "todos"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
             },
-            "response": [
-                {
-                    "id": "21936c23-8b10-41dc-a95c-b4d607411991",
-                    "name": "todo",
-                    "originalRequest": {
-                        "url": {
-                            "path": [
-                                "todos",
-                                ":todoid"
-                            ],
-                            "host": [
-                                "{{baseUrl}}"
-                            ],
-                            "query": [],
-                            "variable": []
-                        },
-                        "header": [
-                            {
-                                "key": "Accept",
-                                "value": "application/json"
-                            }
-                        ],
-                        "method": "GET",
-                        "body": {}
-                    },
-                    "status": "OK",
-                    "code": 200,
-                    "header": [
-                        {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                        },
-                        {
-                            "disabled": true,
-                            "description": {
-                                "content": "",
-                                "type": "text/plain"
-                            },
-                            "key": "Content-Type",
-                            "value": "application/json"
-                        }
-                    ],
-                    "body": "{\n  \"id\": \"proident ipsum elit sit\",\n  \"task\": \"ut exercitation mollit\",\n  \"completed\": true\n}",
-                    "cookie": [],
-                    "_postman_previewlanguage": "json"
-                }
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
             ],
-            "event": [],
-            "protocolProfileBehavior": {
-                "disableBodyPruning": true
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"task\": \"anim consectetur cupid\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
             }
-        },
-        {
-            "id": "70a9845d-6472-42aa-a6e3-c0c56e52ee19",
-            "name": "Update Todo",
-            "request": {
-                "name": "Update Todo",
-                "description": {},
-                "url": {
-                    "path": [
-                        "todos",
-                        ":todoid"
-                    ],
-                    "host": [
-                        "{{baseUrl}}"
-                    ],
-                    "query": [],
-                    "variable": [
-                        {
-                            "type": "any",
-                            "value": "minim occaecat",
-                            "key": "todoid",
-                            "disabled": false,
-                            "description": {
-                                "content": "(Required) ",
-                                "type": "text/plain"
-                            }
-                        }
-                    ]
-                },
-                "header": [
-                    {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                    },
-                    {
-                        "key": "Accept",
-                        "value": "application/json"
-                    }
-                ],
-                "method": "PUT",
-                "body": {
-                    "mode": "raw",
-                    "raw": "{\n  \"task\": \"consectetur magna\",\n  \"completed\": false\n}",
-                    "options": {
-                        "raw": {
-                            "headerFamily": "json",
-                            "language": "json"
-                        }
-                    }
-                },
-                "auth": null
+          },
+          "status": "Created",
+          "code": 201,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
             },
-            "response": [
-                {
-                    "id": "13698118-2d85-4083-a9f5-9100b3809e60",
-                    "name": "OK",
-                    "originalRequest": {
-                        "url": {
-                            "path": [
-                                "todos",
-                                ":todoid"
-                            ],
-                            "host": [
-                                "{{baseUrl}}"
-                            ],
-                            "query": [],
-                            "variable": []
-                        },
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application/json"
-                            }
-                        ],
-                        "method": "PUT",
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\n  \"task\": \"consectetur magna\",\n  \"completed\": false\n}",
-                            "options": {
-                                "raw": {
-                                    "headerFamily": "json",
-                                    "language": "json"
-                                }
-                            }
-                        }
-                    },
-                    "status": "OK",
-                    "code": 200,
-                    "header": [
-                        {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                        },
-                        {
-                            "disabled": true,
-                            "description": {
-                                "content": "",
-                                "type": "text/plain"
-                            },
-                            "key": "Content-Type",
-                            "value": "application/json"
-                        }
-                    ],
-                    "body": "{\n  \"id\": \"proident ipsum elit sit\",\n  \"task\": \"ut exercitation mollit\",\n  \"completed\": true\n}",
-                    "cookie": [],
-                    "_postman_previewlanguage": "json"
-                },
-                {
-                    "id": "8f5e1cb0-2674-427d-bc68-a2ec58579e3f",
-                    "name": "Todo Not Found",
-                    "originalRequest": {
-                        "url": {
-                            "path": [
-                                "todos",
-                                ":todoid"
-                            ],
-                            "host": [
-                                "{{baseUrl}}"
-                            ],
-                            "query": [],
-                            "variable": []
-                        },
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application/json"
-                            }
-                        ],
-                        "method": "PUT",
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\n  \"task\": \"consectetur magna\",\n  \"completed\": false\n}",
-                            "options": {
-                                "raw": {
-                                    "headerFamily": "json",
-                                    "language": "json"
-                                }
-                            }
-                        }
-                    },
-                    "status": "Not Found",
-                    "code": 404,
-                    "header": [],
-                    "cookie": [],
-                    "_postman_previewlanguage": "text"
-                }
-            ],
-            "event": [],
-            "protocolProfileBehavior": {
-                "disableBodyPruning": true
+            {
+              "disabled": true,
+              "description": {
+                "content": "",
+                "type": "text/plain"
+              },
+              "key": "Content-Type",
+              "value": "application/json"
             }
-        },
-        {
-            "id": "64756dda-66b9-4fba-8ae4-0e63e7966afe",
-            "name": "Delete Todo",
-            "request": {
-                "name": "Delete Todo",
-                "description": {},
-                "url": {
-                    "path": [
-                        "todos",
-                        ":todoid"
-                    ],
-                    "host": [
-                        "{{baseUrl}}"
-                    ],
-                    "query": [],
-                    "variable": [
-                        {
-                            "type": "any",
-                            "value": "minim occaecat",
-                            "key": "todoid",
-                            "disabled": false,
-                            "description": {
-                                "content": "(Required) ",
-                                "type": "text/plain"
-                            }
-                        }
-                    ]
-                },
-                "method": "DELETE",
-                "body": {},
-                "auth": null
-            },
-            "response": [
-                {
-                    "id": "b706bba3-f94e-4493-bd53-4055ca827aed",
-                    "name": "No Content",
-                    "originalRequest": {
-                        "url": {
-                            "path": [
-                                "todos",
-                                ":todoid"
-                            ],
-                            "host": [
-                                "{{baseUrl}}"
-                            ],
-                            "query": [],
-                            "variable": []
-                        },
-                        "method": "DELETE",
-                        "body": {}
-                    },
-                    "status": "No Content",
-                    "code": 204,
-                    "header": [],
-                    "cookie": [],
-                    "_postman_previewlanguage": "text"
-                },
-                {
-                    "id": "2ad40f5b-b5cc-43b7-aaf9-201b6e9f082e",
-                    "name": "Todo Not Found",
-                    "originalRequest": {
-                        "url": {
-                            "path": [
-                                "todos",
-                                ":todoid"
-                            ],
-                            "host": [
-                                "{{baseUrl}}"
-                            ],
-                            "query": [],
-                            "variable": []
-                        },
-                        "method": "DELETE",
-                        "body": {}
-                    },
-                    "status": "Not Found",
-                    "code": 404,
-                    "header": [],
-                    "cookie": [],
-                    "_postman_previewlanguage": "text"
-                }
-            ],
-            "event": [],
-            "protocolProfileBehavior": {
-                "disableBodyPruning": true
-            }
+          ],
+          "body": "{\n  \"id\": \"voluptate cillum culpa\",\n  \"task\": \"aliquip sed ea sint\",\n  \"completed\": true\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
         }
-    ],
-    "event": [],
-    "variable": [
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "e4c4a421-563f-41ad-9259-d97e53a602a6",
+      "name": "Get Todos",
+      "request": {
+        "name": "Get Todos",
+        "description": {},
+        "url": {
+          "path": [
+            "todos"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "body": {},
+        "auth": null
+      },
+      "response": [
         {
-            "key": "baseUrl",
-            "value": "{{baseUrl}}"
+          "id": "b256aa8e-49bb-4566-aa1a-901b84e17ef3",
+          "name": "List of all todos",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "todos"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "disabled": true,
+              "description": {
+                "content": "",
+                "type": "text/plain"
+              },
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "[\n  {\n    \"id\": \"adipisicing officia\",\n    \"task\": \"esse Duis ullamco\",\n    \"completed\": true\n  },\n  {\n    \"id\": \"laborum fugia\",\n    \"task\": \"ullamco ex anim consequat\",\n    \"completed\": true\n  }\n]",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
         }
-    ],
-    "info": {
-        "_postman_id": "36962762-584eb5cd-551c-4b2a-8bcc-d4ae56f2db0e",
-        "name": "Todo API",
-        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-        "description": {
-            "content": "OpenAPI Spec for Todo API",
-            "type": "text/plain"
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "b785903c-550c-4cb1-a15f-fc0079a8334a",
+      "name": "Get Todo",
+      "request": {
+        "name": "Get Todo",
+        "description": {},
+        "url": {
+          "path": [
+            "todos",
+            ":todoid"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "type": "any",
+              "value": "irure",
+              "key": "todoid",
+              "disabled": false,
+              "description": {
+                "content": "(Required) ",
+                "type": "text/plain"
+              }
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "body": {},
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "e745c563-febf-4855-b54f-93256209134f",
+          "name": "todo",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "todos",
+                ":todoid"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "disabled": true,
+              "description": {
+                "content": "",
+                "type": "text/plain"
+              },
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"id\": \"voluptate cillum culpa\",\n  \"task\": \"aliquip sed ea sint\",\n  \"completed\": true\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
         }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "dd381858-efee-4f7e-8ba3-2d081a3967e4",
+      "name": "Update Todo",
+      "request": {
+        "name": "Update Todo",
+        "description": {},
+        "url": {
+          "path": [
+            "todos",
+            ":todoid"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "type": "any",
+              "value": "irure",
+              "key": "todoid",
+              "disabled": false,
+              "description": {
+                "content": "(Required) ",
+                "type": "text/plain"
+              }
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "PUT",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"task\": \"ullamco minim\",\n  \"completed\": true\n}",
+          "options": {
+            "raw": {
+              "headerFamily": "json",
+              "language": "json"
+            }
+          }
+        },
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "2d99ad6a-b1c3-476c-a40c-02199e8ec006",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "todos",
+                ":todoid"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"task\": \"ullamco minim\",\n  \"completed\": true\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "disabled": true,
+              "description": {
+                "content": "",
+                "type": "text/plain"
+              },
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"id\": \"voluptate cillum culpa\",\n  \"task\": \"aliquip sed ea sint\",\n  \"completed\": true\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "47a014b9-6094-4b2e-b2a9-71025c2b9b31",
+          "name": "Todo Not Found",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "todos",
+                ":todoid"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"task\": \"ullamco minim\",\n  \"completed\": true\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "header": [],
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "c84f5232-379f-428a-94d3-cb8d70d10f71",
+      "name": "Delete Todo",
+      "request": {
+        "name": "Delete Todo",
+        "description": {},
+        "url": {
+          "path": [
+            "todos",
+            ":todoid"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "type": "any",
+              "value": "irure",
+              "key": "todoid",
+              "disabled": false,
+              "description": {
+                "content": "(Required) ",
+                "type": "text/plain"
+              }
+            }
+          ]
+        },
+        "method": "DELETE",
+        "body": {},
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "e96dc126-e8ad-4269-8d7c-4d0f387c7b6d",
+          "name": "No Content",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "todos",
+                ":todoid"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE",
+            "body": {}
+          },
+          "status": "No Content",
+          "code": 204,
+          "header": [],
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        },
+        {
+          "id": "2e4b0419-8013-44fa-95db-8f244fecc22d",
+          "name": "Todo Not Found",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "todos",
+                ":todoid"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE",
+            "body": {}
+          },
+          "status": "Not Found",
+          "code": 404,
+          "header": [],
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
     }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "{{baseUrl}}"
+    }
+  ],
+  "info": {
+    "_postman_id": "36962762-584eb5cd-551c-4b2a-8bcc-d4ae56f2db0e",
+    "name": "Todo API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "OpenAPI Spec for Todo API 2",
+      "type": "text/plain"
+    }
+  }
 }
