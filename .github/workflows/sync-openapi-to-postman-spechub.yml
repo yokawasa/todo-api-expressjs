@@ -1,0 +1,41 @@
+name: Sync OpenAPI to Postman SpecHub
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize]
+
+env:
+  OPENAPI_FILE: oas/openapi.yaml # Path to your OpenAPI file
+  POSTMAN_SPEC_ID: "7597bd1d-1eea-4e68-9a21-f3ff7f842540"  # Replace with your actual Postman Spec ID
+
+jobs:
+  sync-openapi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Check for changes in openapi.yaml
+        id: detect_change
+        run: |
+          git fetch origin main
+          CHANGED=$(git diff --name-only origin/main HEAD | grep "$OPENAPI_FILE" || true)
+          echo "changed_files=$CHANGED" >> $GITHUB_OUTPUT
+
+      # add step to finish the workflow if no changes are detected
+      - name: Exit if no changes detected
+        if: steps.detect_change.outputs.changed_files == ''
+        run: |
+          echo "No changes detected in $OPENAPI_FILE. Exiting workflow."
+          exit 0
+
+      - name: Sync OpenAPI to Postman SpecHub
+        uses: yokawasa/action-sync-openapi-to-postman-spechub@v0.1.0
+        with:
+          postman-api-key: ${{ secrets.POSTMAN_API_KEY }}
+          postman-spec-id: $POSTMAN_SPEC_ID
+          openapi-file-path: $OPENAPI_FILE
+          openapi-format: "yaml"

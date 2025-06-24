@@ -30,7 +30,7 @@ jobs:
       - name: Exit if no changes detected
         if: steps.detect_change.outputs.changed_files == ''
         run: |
-          echo "No changes detected in oas/openapi.yaml. Exiting workflow."
+          echo "No changes detected in $OPENAPI_FILE. Exiting workflow."
           exit 0
 
       - name: Set up Node.js
