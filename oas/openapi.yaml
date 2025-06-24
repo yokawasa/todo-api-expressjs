@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: Todo API
   version: 1.0.0
-  description: OpenAPI Spec for Todo API 2
+  description: OpenAPI Spec for Todo API
 servers:
   - url: '{{baseUrl}}'
 paths:
