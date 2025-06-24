@@ -20,7 +20,7 @@ jobs:
         id: detect_change
         run: |
           git fetch origin main
-          # Check if OpenAPI has t changed in the last commit (diff HEAD~1 and HEAD)
+          # Check if OpenAPI has changed in the last commit (diff HEAD~1 and HEAD)
           CHANGED=$(git diff --name-only HEAD~1 HEAD | grep "$OPENAPI_FILE" || true)
           echo "changed_files=$CHANGED" >> $GITHUB_OUTPUT
 
