@@ -20,7 +20,7 @@ jobs:
         id: detect_change
         run: |
           git fetch origin main
-          # Check if OpenAPI has changed in the last commit (diff HEAD~1 and HEAD)
+          # Check if OpenAPI has t changed in the last commit (diff HEAD~1 and HEAD)
           CHANGED=$(git diff --name-only HEAD~1 HEAD | grep "$OPENAPI_FILE" || true)
           echo "changed_files=$CHANGED" >> $GITHUB_OUTPUT
 
@@ -34,6 +34,6 @@ jobs:
         uses: yokawasa/action-sync-openapi-to-postman-spechub@v0.1.0
         with:
           postman-api-key: ${{ secrets.POSTMAN_API_KEY }}
-          postman-spec-id: $POSTMAN_SPEC_ID
-          openapi-file-path: $OPENAPI_FILE
+          postman-spec-id: ${{ env.POSTMAN_SPEC_ID }}
+          openapi-file-path: ${{ env.OPENAPI_FILE }}
           openapi-format: "yaml"
