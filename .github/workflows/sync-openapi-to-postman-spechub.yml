@@ -1,9 +1,9 @@
 name: Sync OpenAPI to Postman SpecHub
 
 on:
-  pull_request:
-    branches: [main]
-    types: [opened, synchronize]
+  push:
+    branches:
+      - main # mainブランチへのpushをトリガー
 
 env:
   OPENAPI_FILE: oas/openapi.yaml # Path to your OpenAPI file
@@ -13,16 +13,14 @@ jobs:
   sync-openapi:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout PR branch
+      - name: Checkout main branch
         uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Check for changes in openapi.yaml
         id: detect_change
         run: |
           git fetch origin main
-          CHANGED=$(git diff --name-only origin/main HEAD | grep "$OPENAPI_FILE" || true)
+          CHANGED=$(git diff --name-only HEAD~1 HEAD | grep "$OPENAPI_FILE" || true)
           echo "changed_files=$CHANGED" >> $GITHUB_OUTPUT
 
       # add step to finish the workflow if no changes are detected
