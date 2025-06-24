@@ -7,7 +7,7 @@ on:
 
 env:
   OPENAPI_FILE: oas/openapi.yaml # Path to your OpenAPI file
-  POSTMAN_SPEC_ID: "7597bd1d-1eea-4e68-9a21-f3ff7f842540"  # Replace with your actual Postman Spec ID
+  POSTMAN_SPEC_ID: "1ccee852-27b6-4169-b5f1-af123b75be75"  # Replace with your actual Postman Spec ID
 
 jobs:
   sync-openapi:
