@@ -7,7 +7,7 @@ on:
 
 env:
   OPENAPI_FILE: oas/openapi.yaml # Path to your OpenAPI file
-  POSTMAN_SPEC_ID: "1ccee852-27b6-4169-b5f1-af123b75be75"  # Replace with your actual Postman Spec ID
+  POSTMAN_SPEC_ID: "501b63dc-660d-4707-82e2-84e59cfb6024"  # Replace with your actual Postman Spec ID
 
 jobs:
   sync-openapi:
@@ -20,7 +20,7 @@ jobs:
         id: detect_change
         run: |
           git fetch origin main
-          # Check if OpenAPI has changed in the last commit (diff HEAD~1 and HEAD)
+          # Check if OpenAPI has t changed in the last commit (diff HEAD~1 and HEAD)
           CHANGED=$(git diff --name-only HEAD~1 HEAD | grep "$OPENAPI_FILE" || true)
           echo "changed_files=$CHANGED" >> $GITHUB_OUTPUT
 
