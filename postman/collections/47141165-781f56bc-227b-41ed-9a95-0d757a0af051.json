@@ -2,7 +2,6 @@
 	"info": {
 		"_postman_id": "47141165-781f56bc-227b-41ed-9a95-0d757a0af051",
 		"name": "Todo API",
-		"description": "OpenAPI Spec for Todo API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
